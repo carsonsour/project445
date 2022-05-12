@@ -1,0 +1,12 @@
+<%- include("_header") -%>
+<h2>Customer Export</h2>
+<p>Total number of records in the database: </p>
+<p>Enter a file name and click 'Export Customers'</p>
+<form action="/output" method="post">
+    <button type="submit" id="submit" value="Download" class="btn btn-primary">Export Customers</button>
+</form>
+<% if(message.substring(0,5) === "Error") { %>
+    <h2>Error!</h2>
+    <p><%= message %></p>
+<% } %>
+<%- include("_footer") -%>
